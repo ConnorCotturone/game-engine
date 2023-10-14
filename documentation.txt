@@ -1,0 +1,131 @@
+-------------------------------------------
+|   RESOURCES                             |
+-------------------------------------------
+
+OpenGL (Youtube Playlist) - https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2
+                   (wiki) - https://www.khronos.org/opengl/wiki/
+Game Engines - https://www.youtube.com/watch?v=u8wrPlpeO5A
+             - https://www.youtube.com/watch?v=hRL56gXqj-4 (Not Watched May Not Be Helpful)
+Physics Engine - (book) https://theswissbay.ch/pdf/Gentoomen%20Library/Game%20Development/Programming/Game%20Physics%20Engine%20Development.pdf
+               - (book) http://ndl.ethernet.edu.et/bitstream/123456789/24446/1/Gabor%20Szauer_2017.pdf
+
+Ray Tracing - https://www.youtube.com/watch?v=Qz0KTGYJtUk&list=LL&index=10&t=1928s
+
+Fluid Simulation - https://www.youtube.com/watch?v=rSKMYc1CQHE&list=LL&index=11
+
+Portals / Non Euclidean Geometry - https://www.youtube.com/watch?v=cWpFZbjtSQg
+                                 - https://www.youtube.com/watch?v=jlRdSdHD3Wg&t=845s
+
+Misc - (Github of books for engines) - https://github.com/138paulmiller/learn (Best Book : Game Engine Architecture)
+
+-------------------------------------------
+|   GENERAL-GUIDELINES                    |
+-------------------------------------------
+
+For git commits describe what you added, no uppercase letters unless necessary,
+
+git commit -m"updated calculate_weight function"
+git commit -m"added documentation for OpenGL"
+
+-------------------------------------------
+|   CODE-STYLE-GUIDELINES                 |
+-------------------------------------------
+
+NAMING CONVENTIONS:
+
+- Variables
+    = Use 'snake_case'
+    = Create names that are short and precise
+    = All variables are created equally, use them to communicate function
+
+    DON'T:
+        return type-2-diabetes
+    DO:
+        return node_ptr
+
+    DON'T:
+        int tmpx
+    DO:
+        int tmp_x_velocity
+
+    DON'T:
+        int *tmp
+    DO:
+        int* tmp
+        
+- Functions
+    = Use 'snake_case'
+    = Describe the use of the function in a short and precise way
+
+    DON'T:
+        double *test()
+    DO:
+        double* test()
+
+- Classes
+    = Use 'camelCase'
+
+- Indentation
+    = Follow the standard below
+    
+    if (stmt) {
+
+    } else if (stmt) {
+
+    } else {
+
+    }
+
+    while (stmt) {
+
+    }
+
+    for (int i = 0; i < val; i++) {
+
+    }
+
+    int tmp_function(int val) {
+
+    }
+
+- Comments
+    = Write comments that explain generally how the code operates
+      primarily describing what it is doing
+    = For comments for a function follow this standard
+
+    /*
+        calculates the net worth of an individual
+
+        income : pointer to income
+        individual : a 'person' struct containing (...) information
+    */
+    int calculate_net_worth(int* income, struct person individual)
+
+    = For comments describing functionality follow this standard
+
+    /*
+        (...)
+    */
+    void bubble_sort(int values[], int values_size) {
+        bool has_swapped;
+
+        // place the largest elements in the correct
+        // position by swapping adjacent elements
+        // that are in the wrong order
+        for (int i = 0; i < values_size - 1; i++) {
+            has_swapped = false;
+            for (int j = 0; j < values_size - 1; j++) {
+                if (values[j] > values[j + 1]) {
+                    swap(values[j], values[j+1]);
+                    has_swapped = true;
+                }
+             
+            // if no two elements swapped by inner loop, break
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+
+- Error Handling
+    (TODO)
