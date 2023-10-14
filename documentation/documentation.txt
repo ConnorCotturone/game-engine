@@ -2,6 +2,9 @@
 |   RESOURCES                             |
 -------------------------------------------
 
+Example Code Base for an Engine - https://github.com/godotengine/godot
+                                - https://github.com/ezEngine/ezEngine
+
 OpenGL (Youtube Playlist) - https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2
                    (wiki) - https://www.khronos.org/opengl/wiki/
 Game Engines - https://www.youtube.com/watch?v=u8wrPlpeO5A
@@ -23,6 +26,7 @@ Misc - (Github of books for engines) - https://github.com/138paulmiller/learn (B
 -------------------------------------------
 
 For git commits describe what you added, no uppercase letters unless necessary,
+if you feel like the name is too long you probably should have pushed sooner
 
 git commit -m"updated calculate_weight function"
 git commit -m"added documentation for OpenGL"
