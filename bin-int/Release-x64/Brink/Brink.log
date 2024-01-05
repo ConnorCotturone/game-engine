@@ -1,0 +1,7 @@
+﻿  Test.cpp
+     Creating library C:\Users\Sapli\source\repos\Brink\bin\Release-x64\Brink\Brink.lib and object C:\Users\Sapli\source\repos\Brink\bin\Release-x64\Brink\Brink.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Brink.vcxproj -> C:\Users\Sapli\source\repos\Brink\bin\Release-x64\Brink\Brink.dll
