@@ -1,5 +1,0 @@
-﻿  Application.cpp
-C:\Users\Sapli\source\repos\Brink\Brink\src\Brink\Application.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'src/Brink/Application.cpp')
-  
-  Brink.vcxproj -> C:\Users\Sapli\source\repos\Brink\bin\Debug-x64\Brink\Brink.dll
