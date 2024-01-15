@@ -1,0 +1,3 @@
+run GenerateProjects.bat and open the Brink.sln file
+when rerunning GenerateProjects.bat close VS
+when asked by VS just click the 'reload' option
