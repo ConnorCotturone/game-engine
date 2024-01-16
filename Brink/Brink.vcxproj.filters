@@ -34,6 +34,7 @@
     <ClInclude Include="src\Brink\Log.h">
       <Filter>Brink</Filter>
     </ClInclude>
+    <ClInclude Include="src\bkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Brink\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Brink\Log.cpp">
       <Filter>Brink</Filter>
     </ClCompile>
+    <ClCompile Include="src\bkpch.cpp" />
   </ItemGroup>
 </Project>

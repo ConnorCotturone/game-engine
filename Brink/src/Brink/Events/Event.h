@@ -1,9 +1,6 @@
 #pragma once
-
+#include "bkpch.h"
 #include "Brink/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Brink {
 	enum class EventType {
@@ -39,7 +36,6 @@ namespace Brink {
 			virtual const char* GetName() const = 0;
 			virtual int GetCategoryFlags() const = 0;
 			virtual std::string ToString() const { return GetName(); }
-
 			inline bool IsInCategory(EventCategory category) { return GetCategoryFlags() & category; }
 	};
 

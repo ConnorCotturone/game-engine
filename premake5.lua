@@ -16,6 +16,9 @@ project "Brink"
 	targetdir ("bin/" .. output_directory .. "/%{prj.name}")
 	objdir ("bin-int/" .. output_directory .. "/%{prj.name}")
 
+	pchheader "bkpch.h"
+	pchsource "Brink/src/bkpch.cpp"
+
 	files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
 	includedirs { "%{prj.name}/src", "%{prj.name}/vendor/spdlog/include" }

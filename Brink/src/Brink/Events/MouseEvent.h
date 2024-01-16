@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Brink {
 	class BRINK_API MouseMovedEvent : public Event {
 		private:
