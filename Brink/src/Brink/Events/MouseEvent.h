@@ -17,22 +17,28 @@ namespace Brink {
 				ss << "MouseMovedEvent (X, Y): " << m_MouseX << ", " << m_MouseY;
 				return ss.str();
 			}
+
+			EVENT_CLASS_TYPE(MouseMoved)
+			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	};
 
 	class BRINK_API MouseScrolledEvent : public Event {
-	private:
-		float m_XOffset, m_YOffset;
-	public:
-		MouseScrolledEvent(float xOffset, float yOffset) : m_XOffset(xOffset), m_YOffset(yOffset) {}
+		private:
+			float m_XOffset, m_YOffset;
+		public:
+			MouseScrolledEvent(float xOffset, float yOffset) : m_XOffset(xOffset), m_YOffset(yOffset) {}
 
-		inline float GetXOffset() const { return m_XOffset; }
-		inline float GetYOffset() const { return m_YOffset; }
+			inline float GetXOffset() const { return m_XOffset; }
+			inline float GetYOffset() const { return m_YOffset; }
 
-		std::string ToString() const override {
-			std::stringstream ss;
-			ss << "MouseScrolledEvent (X, Y): " << m_XOffset << ", " << m_YOffset;
-			return ss.str();
-		}
+			std::string ToString() const override {
+				std::stringstream ss;
+				ss << "MouseScrolledEvent (X, Y): " << m_XOffset << ", " << m_YOffset;
+				return ss.str();
+			}
+
+			EVENT_CLASS_TYPE(MouseScrolled)
+			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	};
 
 	class BRINK_API MouseButtonEvent : public Event {
