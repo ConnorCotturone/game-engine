@@ -8,6 +8,11 @@ workspace "Brink"
 
 output_directory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDirectories = {}
+IncludeDirectories["GLFW"] = "Brink/vendor/GLFW/include"
+
+include "Brink/vendor/GLFW"
+
 project "Brink"
 	location "Brink"
 	kind "SharedLib"
@@ -19,9 +24,22 @@ project "Brink"
 	pchheader "bkpch.h"
 	pchsource "Brink/src/bkpch.cpp"
 
-	files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
+	files { 
+		"%{prj.name}/src/**.h", 
+		"%{prj.name}/src/**.cpp" 
+	}
 
-	includedirs { "%{prj.name}/src", "%{prj.name}/vendor/spdlog/include" }
+	includedirs { 
+		"%{prj.name}/src", 
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDirectories.GLFW}"
+	}
+
+	links { 
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib" 
+	}
 
 	filter "system:windows"
 		cppdialect "C++17"
