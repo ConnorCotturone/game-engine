@@ -18,12 +18,12 @@ project "Brink"
 
 	files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
-	includedirs { "%{prj.name}/vendor/spdlog/include" }
+	includedirs { "%{prj.name}/src", "%{prj.name}/vendor/spdlog/include" }
 
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0.22621.0"
+		systemversion "latest"
 
 		defines { "BK_PLATFORM_WINDOWS;", "BK_BUILD_DLL;" }
 
@@ -58,7 +58,7 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0.22621.0"
+		systemversion "latest"
 
 		defines { "BK_PLATFORM_WINDOWS;" }
 

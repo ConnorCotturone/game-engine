@@ -9,3 +9,5 @@
 #else
 	#error Brink only currently supports Windows
 #endif
+
+#define BIT(x) (1 << x)

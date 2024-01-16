@@ -4,6 +4,9 @@
     <Filter Include="Brink">
       <UniqueIdentifier>{DBA1E90C-47B6-11BE-1038-B51D7C0B0EEF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Brink\Events">
+      <UniqueIdentifier>{5F49719B-4BAC-0040-F431-39F6E073CCC2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Brink.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Brink\EntryPoint.h">
       <Filter>Brink</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brink\Events\ApplicationEvent.h">
+      <Filter>Brink\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brink\Events\Event.h">
+      <Filter>Brink\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brink\Events\KeyEvent.h">
+      <Filter>Brink\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brink\Events\MouseEvent.h">
+      <Filter>Brink\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Brink\Log.h">
       <Filter>Brink</Filter>
