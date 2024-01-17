@@ -37,6 +37,12 @@
     <ClInclude Include="src\Brink\Events\MouseEvent.h">
       <Filter>Brink\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Brink\Layer.h">
+      <Filter>Brink</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brink\LayerStack.h">
+      <Filter>Brink</Filter>
+    </ClInclude>
     <ClInclude Include="src\Brink\Log.h">
       <Filter>Brink</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Brink\Application.cpp">
+      <Filter>Brink</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Brink\Layer.cpp">
+      <Filter>Brink</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Brink\LayerStack.cpp">
       <Filter>Brink</Filter>
     </ClCompile>
     <ClCompile Include="src\Brink\Log.cpp">

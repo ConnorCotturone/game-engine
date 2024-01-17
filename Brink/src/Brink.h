@@ -4,6 +4,7 @@
 
 #include "Brink/Application.h"
 #include "Brink/Log.h"
+#include "Brink/Layer.h"
 
 // Entry Point
 

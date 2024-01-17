@@ -27,11 +27,9 @@ namespace Brink {
 	#define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
 	class BRINK_API Event {
-		friend class EventDispatcher;
-
-		protected:
-			bool m_Handled = false;
 		public:
+			bool Handled = false;
+
 			virtual EventType GetEventType() const = 0;
 			virtual const char* GetName() const = 0;
 			virtual int GetCategoryFlags() const = 0;
@@ -52,7 +50,7 @@ namespace Brink {
 			template<typename T>
 			bool Dispatch(EventFn<T> funct) {
 				if (m_Event.GetEventType() == T::GetStaticType()) {
-					m_Event.m_Handled = funct(*(T*)&m_Event);
+					m_Event.Handled = funct(*(T*)&m_Event);
 					return true;
 				}
 				return false;

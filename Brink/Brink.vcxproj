@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -110,6 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -137,6 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -160,6 +163,8 @@
     <ClInclude Include="src\Brink\Events\Event.h" />
     <ClInclude Include="src\Brink\Events\KeyEvent.h" />
     <ClInclude Include="src\Brink\Events\MouseEvent.h" />
+    <ClInclude Include="src\Brink\Layer.h" />
+    <ClInclude Include="src\Brink\LayerStack.h" />
     <ClInclude Include="src\Brink\Log.h" />
     <ClInclude Include="src\Brink\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -167,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Brink\Application.cpp" />
+    <ClCompile Include="src\Brink\Layer.cpp" />
+    <ClCompile Include="src\Brink\LayerStack.cpp" />
     <ClCompile Include="src\Brink\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\bkpch.cpp">
