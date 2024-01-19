@@ -10,8 +10,10 @@ output_directory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDirectories = {}
 IncludeDirectories["GLFW"] = "Brink/vendor/GLFW/include"
+IncludeDirectories["Glad"] = "Brink/vendor/Glad/include"
 
 include "Brink/vendor/GLFW"
+include "Brink/vendor/Glad"
 
 project "Brink"
 	location "Brink"
@@ -32,11 +34,13 @@ project "Brink"
 	includedirs { 
 		"%{prj.name}/src", 
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDirectories.GLFW}"
+		"%{IncludeDirectories.GLFW}",
+		"%{IncludeDirectories.Glad}"
 	}
 
 	links { 
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"dwmapi.lib" 
 	}
@@ -46,7 +50,7 @@ project "Brink"
 		staticruntime "On"
 		systemversion "latest"
 
-		defines { "BK_PLATFORM_WINDOWS;", "BK_BUILD_DLL;" }
+		defines { "BK_PLATFORM_WINDOWS", "BK_BUILD_DLL", "GLFW_INCLUDE_NONE" }
 
 		postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. output_directory .. "/Sandbox") }
 

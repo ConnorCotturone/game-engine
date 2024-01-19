@@ -6,6 +6,8 @@
 #include "Brink/Events/KeyEvent.h"
 #include "Brink/Events/ApplicationEvent.h"
 
+#include <glad/glad.h>
+
 namespace Brink {
 	static bool s_GLFWInitialized = false;
 
@@ -33,6 +35,8 @@ namespace Brink {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		BK_CORE_ASSERT(status, "failed to initialize Glad");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

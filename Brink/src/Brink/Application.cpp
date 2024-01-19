@@ -4,7 +4,7 @@
 #include "Brink/Log.h"
 
 // temp for test
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace Brink {
 
