@@ -13,6 +13,7 @@ class Sandbox : public Brink::Application {
 	public :
 		Sandbox() {
 			PushLayer(new ExampleLayer());
+			PushOverlay(new Brink::ImGuiLayer());
 		}
 
 		~Sandbox() {

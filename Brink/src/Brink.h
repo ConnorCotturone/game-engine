@@ -5,6 +5,7 @@
 #include "Brink/Application.h"
 #include "Brink/Log.h"
 #include "Brink/Layer.h"
+#include "Brink/ImGui/ImGuiLayer.h"
 
 // Entry Point
 
