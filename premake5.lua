@@ -88,7 +88,7 @@ project "Sandbox"
 		staticruntime "On"
 		systemversion "latest"
 
-		defines { "BK_PLATFORM_WINDOWS;" }
+		defines { "BK_PLATFORM_WINDOWS" }
 
 	filter "configurations:Debug"
 		defines "BK_DEBUG"
