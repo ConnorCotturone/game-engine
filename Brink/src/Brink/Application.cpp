@@ -44,10 +44,6 @@ namespace Brink {
 
 			for (Layer* layer : m_LayerStack) layer->OnUpdate();
 
-			// temp logging to test input polling
-			auto [x, y] = Input::GetMousePos();
-			BK_CORE_TRACE("{0}, {1}", x, y);
-
 			m_Window->OnUpdate();
 		}
 	}

@@ -152,6 +152,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Brink\Keycodes.h" />
+    <ClInclude Include="src\Brink\MouseButtonCodes.h" />
     <ClInclude Include="src\Brink.h" />
     <ClInclude Include="src\Brink\Application.h" />
     <ClInclude Include="src\Brink\Core.h" />
