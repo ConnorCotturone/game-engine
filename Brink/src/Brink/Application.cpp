@@ -3,6 +3,8 @@
 
 #include "Brink/Log.h"
 
+#include "Input.h"
+
 // temp for test
 #include <glad/glad.h>
 
@@ -41,6 +43,10 @@ namespace Brink {
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack) layer->OnUpdate();
+
+			// temp logging to test input polling
+			auto [x, y] = Input::GetMousePos();
+			BK_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
