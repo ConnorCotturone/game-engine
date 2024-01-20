@@ -59,7 +59,7 @@ project "Brink"
 
 		defines { "BK_PLATFORM_WINDOWS", "BK_BUILD_DLL", "GLFW_INCLUDE_NONE" }
 
-		postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. output_directory .. "/Sandbox") }
+		postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. output_directory .. "/Sandbox/\"") }
 
 	filter "configurations:Debug"
 		defines "BK_DEBUG"
