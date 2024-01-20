@@ -5,6 +5,7 @@ workspace "Brink"
 	-- Release is debug with a lot of function stripped but with optimization and logging,
 	-- Dist is the distribution or final release form
 	configurations { "Debug", "Release", "Dist" }
+	startproject "Sandbox"
 
 output_directory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
@@ -16,6 +17,7 @@ IncludeDirectories["ImGui"] = "Brink/vendor/imgui"
 include "Brink/vendor/GLFW"
 include "Brink/vendor/Glad"
 include "Brink/vendor/imgui"
+
 
 project "Brink"
 	location "Brink"
