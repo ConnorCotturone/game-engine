@@ -16,7 +16,7 @@
 
 #ifdef BK_ENABLE_ASSERTS
 	#define BK_ASSERT(x, ...) { if(!(x)) { BK_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
-	#define HZ_CORE_ASSERT(x, ...) { if(!(x)) { BK_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define BK_CORE_ASSERT(x, ...) { if(!(x)) { BK_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
 	#define BK_ASSERT(x, ...)
 	#define BK_CORE_ASSERT(x, ...)
