@@ -23,6 +23,7 @@ project "Brink"
 	location "Brink"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. output_directory .. "/%{prj.name}")
 	objdir ("bin-int/" .. output_directory .. "/%{prj.name}")
@@ -53,7 +54,6 @@ project "Brink"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines { "BK_PLATFORM_WINDOWS", "BK_BUILD_DLL", "GLFW_INCLUDE_NONE" }
@@ -62,23 +62,24 @@ project "Brink"
 
 	filter "configurations:Debug"
 		defines "BK_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "BK_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "BK_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. output_directory .. "/%{prj.name}")
 	objdir ("bin-int/" .. output_directory .. "/%{prj.name}")
@@ -91,22 +92,21 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines { "BK_PLATFORM_WINDOWS" }
 
 	filter "configurations:Debug"
 		defines "BK_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "BK_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "BK_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
